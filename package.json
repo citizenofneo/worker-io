@@ -6,7 +6,8 @@
   "scripts": {
     "sts": "tsc --project tsconfig.json --watch",
     "dev": "nodemon --watch ./build ./build",
-    "build": "NODE_ENV=production tsc --project tsconfig.json"
+    "build": "NODE_ENV=production tsc --project tsconfig.json",
+    "publish":"npm publish --access=public"
   },
   "keywords": [
     "worker_threads",
