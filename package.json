@@ -1,0 +1,25 @@
+{
+  "name": "worker-io",
+  "version": "1.0.0",
+  "description": "Iterface for worker_threads as socket.io (emit/on)",
+  "main": "build/WorkerConnect",
+  "scripts": {
+    "sts": "tsc --project tsconfig.json --watch",
+    "dev": "nodemon --watch ./build ./build",
+    "build": "NODE_ENV=production tsc --project tsconfig.json"
+  },
+  "keywords": [
+    "worker_threads",
+    "worker",
+    "io"
+  ],
+  "author": "Citizenofneo",
+  "license": "ISC",
+  "dependencies": {
+   
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "@types/node": "^18.11.9"
+  }
+}
