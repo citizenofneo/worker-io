@@ -35,4 +35,4 @@ class default_1 {
     }
 }
 exports.default = default_1;
-//# sourceMappingURL=WorkerConnect.js.map
+//# sourceMappingURL=WorkerIO.js.map

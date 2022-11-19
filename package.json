@@ -1,8 +1,8 @@
 {
-  "name": "worker-io",
-  "version": "1.0.0",
+  "name": "@citizenofneo/worker-io",
+  "version": "1.0.1",
   "description": "Iterface for worker_threads as socket.io (emit/on)",
-  "main": "build/WorkerConnect",
+  "main": "build/WorkerIO",
   "scripts": {
     "sts": "tsc --project tsconfig.json --watch",
     "dev": "nodemon --watch ./build ./build",
@@ -13,9 +13,13 @@
     "worker",
     "io"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/citizenofneo/worker-io"
+  },
   "author": "Citizenofneo",
   "license": "ISC",
-  "dependencies": {
+    "dependencies": {
    
   },
   "devDependencies": {

@@ -1,5 +1,6 @@
 import { isMainThread, parentPort, Worker, workerData } from 'worker_threads'
-import WorkerConnect from './build/WorkerConnect'
+import WorkerIO from './build/WorkerIO'
+
 
 
 const testJson = {
@@ -15,7 +16,7 @@ if (isMainThread) {
   })
 
   // create io connect of Main thread
-  const io = new WorkerConnect(worker as unknown as MessagePort)
+  const io = new WorkerIO(worker as unknown as MessagePort)
 
   // use 'emit' as socket.io 
   io.emit('testJson', result => console.log('[MAIN]', 'asyncEmit testJson', result))
@@ -28,7 +29,7 @@ if (isMainThread) {
   // WORKER
 
   // create io connect of worker thread
-  const io = new WorkerConnect(parentPort as unknown as MessagePort)
+  const io = new WorkerIO(parentPort as unknown as MessagePort)
 
   io.on<{ timeReq: typeof testJson }, { payload: any, me: string }>('testJson', (req, callback) => {
     console.log('[WORKER]', 'testJson', req)
